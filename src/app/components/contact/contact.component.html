@@ -1,0 +1,99 @@
+
+<div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+  <div class="sm:mx-auto sm:w-full sm:max-w-sm">
+    <h2 class="mt-10 text-center text-2xl/9 font-bold tracking-tight text-gray-900">Contact Us</h2>
+  </div>
+
+  <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+    <form [formGroup]="DataUser" (ngSubmit)="handleSubmitForm()" class="space-y-6" >
+      <div>
+        <div class="mt-2">
+          <input id="email"
+      placeholder="email"
+       name="email"
+       type="email"
+       autocomplete="email"
+       required
+       class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6"
+       formControlName="email"
+       >
+        </div>
+       @if (DataUser.get('email')?.invalid && DataUser.get('email')?.touched ) {
+        <div  class="text-red-500">
+          email is required.
+        </div>
+       }
+      </div>
+
+      <div>
+
+        <div class="mt-2">
+          <input id="name"
+      name="name"
+      type="name"
+      autocomplete="name"
+      required
+      placeholder="name"
+
+      class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6"
+      formControlName="name"
+      >
+        </div>
+        @if (DataUser.get('name')?.invalid && DataUser.get('name')?.touched ) {
+          <div  class="text-red-500">
+            Name is required.
+          </div>
+         }
+      </div>
+
+      <div>
+
+        <div class="mt-2">
+          <input id="phone"
+          name="phone"
+          type="string"
+          placeholder="phone"
+
+          autocomplete="phone"
+          required
+          class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6"
+          formControlName="phone"
+          >
+        </div>
+        @if (DataUser.get('phone')?.invalid && DataUser.get('phone')?.touched ) {
+          <div  class="text-red-500">
+            phone is required.
+          </div>
+         }
+      </div>
+
+      <div>
+
+        <div class="mt-2">
+          <input id="jop"
+          name="jop"
+          type="string"
+          placeholder="jop"
+
+          autocomplete="jop"
+          required
+          class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6"
+          formControlName="jop"
+          >
+        </div>
+        @if (DataUser.get('jop')?.invalid && DataUser.get('jop')?.touched ) {
+          <div  class="text-red-500">
+            jop is required.
+          </div>
+         }
+      </div>
+
+      <div class="flex justify-center items-center">
+        <button type="submit" class="btn-secondary w-1/2 my-3 p-2 bg-blue-500 text-white rounded-lg">Submit</button>
+      </div>
+  
+    </form>
+
+
+  </div>
+</div>

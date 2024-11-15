@@ -1,0 +1,33 @@
+
+section h1::before{
+  content: '';
+    animation: animate 3s  linear infinite;
+    transition: 2s  all;
+  }
+
+  @keyframes animate {
+    0%{
+      content: 'About Us';
+    }
+    10%{
+      content: 'About ';
+
+    }
+    30%{
+      content: 'Abo';
+
+    }
+    60%{
+      content: 'Abo';
+    }
+    90%{
+      content: 'A';
+    }
+
+    100%{
+      content: '';
+
+
+    }
+
+  }

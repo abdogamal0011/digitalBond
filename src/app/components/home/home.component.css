@@ -1,0 +1,33 @@
+
+header h1::before{
+content: '';
+  animation: animate 3s  linear infinite;
+  transition: 2s 2s all;
+}
+
+@keyframes animate {
+  0%{
+    content: 'DIGITAL BOND ';
+  }
+  10%{
+    content: 'DIGITAL BO ';
+
+  }
+  30%{
+    content: 'DIGITAL';
+
+  }
+  60%{
+    content: 'DIGI';
+  }
+  90%{
+    content: 'DI';
+  }
+
+  100%{
+    content: '';
+
+
+  }
+
+}
